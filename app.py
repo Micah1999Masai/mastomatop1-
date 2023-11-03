@@ -68,7 +68,7 @@ def main():
             
             
             img=tf.keras.preprocessing.image.img_to_array(img)
-            model=tf.keras.models.load_model("model_vgg19.h5")
+            model=tf.keras.models.load_model("CNN.h5")
                    
             img=prepare(img)
 
