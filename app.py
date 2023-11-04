@@ -17,7 +17,7 @@ def prepare(file):
     
     img_array=file/255
     
-    return img_array.reshape(-1,128,128,10)
+    return img_array.reshape(-1,128,128,3)
 
 class_dict={'Tomato Bacterial spot': 0,
             'Tomato Early blight': 1,
@@ -49,7 +49,7 @@ def load_image(image_file):
 
 def main():
     with st.sidebar:
-        st.header("TOMATONIC")
+        st.header("FARMLAND")
         
         st.image('./img2.jpg')
     
@@ -63,7 +63,7 @@ def main():
         st.warning("Please upload an image first")
     else:
 
-        if st.button("process"):
+        if st.button("CHECK DISEASE"):
             img=load_image(image_file)
             
             
