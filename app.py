@@ -63,7 +63,7 @@ def main():
         st.warning("Please upload an image first")
     else:
 
-        if st.button("CHECK DISEASE"):
+        if st.button("process"):
             img=load_image(image_file)
             
             
