@@ -6,7 +6,7 @@ import random
 
 # Configure the app
 st.set_page_config(
-    page_title = 'Tomato heading',
+    page_title = 'TomatoLeaf Watcher: Disease Identification',
     page_icon = ":tomato:",
     
     initial_sidebar_state = 'auto'
@@ -17,7 +17,7 @@ def prepare(file):
     
     img_array=file/255
     
-    return img_array.reshape(-1,128,128,3)
+    return img_array.reshape(-1,128,128,10)
 
 class_dict={'Tomato Bacterial spot': 0,
             'Tomato Early blight': 1,
@@ -63,7 +63,7 @@ def main():
         st.warning("Please upload an image first")
     else:
 
-        if st.button("Process"):
+        if st.button("CHECK DISEASE"):
             img=load_image(image_file)
             
             
